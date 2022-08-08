@@ -1,0 +1,37 @@
+ERROR: addr2line not found (C:\Users\Eric Gunnerson\.platformio\packages\toolchain-xtensa\bin/xtensa-lx106-elf-addr2line)
+Exception: 29 (StoreProhibited: A store referenced a page mapped with an attribute that does not permit stores)
+
+epc1:     0x4020f925: __strncpy_aux at /Users/igrokhotkov/e/newlib-xtensa/xtensa-lx106-elf/newlib/libc/machine/xtensa/../../../../.././newlib/libc/machine/xtensa/strncpy.S:35
+epc2:     0x00000000
+epc3:     0x00000000
+excvaddr: 0x00000000
+depc:     0x00000000
+
+ctx: cont
+
+sp:       0x3ffffca0
+end:      0x3fffffd0
+offset:   0x000001a0
+
+stack:
+0x4020b648: HardwareSerial::write(unsigned char const*, unsigned int) at ??:?
+0x4020b865: Print::write(char const*) at ??:?
+0x4020b865: Print::write(char const*) at ??:?
+0x4020b954: Print::println() at ??:?
+0x4020b9a0: Print::println(char const*) at ??:?
+0x40203ca8: Tokenizer::GetToken() at ??:?
+0x40204139: PixelHandler::CheckForCommandUpdate() at ??:?
+0x4020ba3d: Print::printNumber(unsigned long, unsigned char) at ??:?
+0x4020c9a4: esp_yield at ??:?
+0x4020b648: HardwareSerial::write(unsigned char const*, unsigned int) at ??:?
+0x4020c9a4: esp_yield at ??:?
+0x4020160f: delay at ??:?
+0x40106608: delayMicroseconds at ??:?
+0x40202142: uart_wait_tx_empty at ??:?
+0x4020581b: TaskProcessMessages::OnUpdate(unsigned int) at ??:?
+0x401065a4: millis at ??:?
+0x4020d724: TaskManager::ProcessTasks(unsigned int) at ??:?
+0x40205aa3: TaskManager::Loop(unsigned short) at ??:?
+0x4020471b: loop at ??:?
+0x4020ca30: loop_wrapper() at core_esp8266_main.cpp:?
+0x40100721: cont_wrapper at ??:?
