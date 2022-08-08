@@ -13,18 +13,11 @@ extern "C"
 }
 
 
-#include "PersistentStorage.h"
-
 #include "RgbColorReal.h"
 #include "Fader.h"
 #include "FaderGroup.h"
-
 #include "Strip.h"
-
 #include "taskProcessMessages.h"
-
-#include "ArrowColor.h"
-
 
 LEDStrip strip(2, 24);
 
