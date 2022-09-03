@@ -1,2 +1,5 @@
+devyte/ESPAsyncDNSServer@^1.0.0
 Task
+me-no-dev/ESPAsyncUDP@0.0.0-alpha+sha.697c75a025
 NeoPixelBus
+me-no-dev/ESP Async WebServer@^1.2.3

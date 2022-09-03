@@ -16,9 +16,14 @@ class LEDStrip
 
     void Init()
     {
+      if (_pStrip != 0)
+      {
+        Serial.println("Strip reinit!");
+        return;
+      }
+      
       _pStrip = new NeoPixelBus<NeoRgbFeature, Neo800KbpsMethod>(_pixelCount, _pixelPin);
       _pStrip->Begin();
-      Serial.println("Strip Init");
     }
 
     int GetPixelCount()

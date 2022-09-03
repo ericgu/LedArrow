@@ -7,7 +7,7 @@ private:
     float _totalDistance;
 
 public:
-    FaderGroup(int total)
+    void Init(int total)
     {
         _total = total;
         _count = 0;
@@ -17,6 +17,12 @@ public:
 
     void Add(Fader* pFader)
     {
+        if (_count == _total)
+        {
+            Serial.println("Fader add at end");
+            return;
+        }
+
         _pFaders[_count] = pFader;
         _count++;
         _totalDistance += pFader->GetDistance();

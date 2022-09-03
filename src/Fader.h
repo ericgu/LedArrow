@@ -1,16 +1,16 @@
 class Fader
 {
     float _distance;
-    float _r1;
-    float _g1;
-    float _b1;
-    float _r2;
-    float _g2;
-    float _b2;
+    TargetBrightness *_r1;
+    TargetBrightness *_g1;
+    TargetBrightness *_b1;
+    TargetBrightness *_r2;
+    TargetBrightness *_g2;
+    TargetBrightness *_b2;
 
-public:
-  Fader(float distance, float r1, float g1, float b1, float r2, float g2, float b2)
-  {
+  public:
+    Fader(float distance, TargetBrightness *r1, TargetBrightness *g1, TargetBrightness *b1, TargetBrightness *r2, TargetBrightness *g2, TargetBrightness *b2)
+    {
       _distance = distance;
       _r1 = r1;
       _g1 = g1;
@@ -34,9 +34,9 @@ public:
 
     float ratio = value / _distance;
     return RgbColorReal(
-        (_r2 - _r1) * ratio + _r1, 
-        (_g2 - _g1) * ratio + _g1, 
-        (_b2 - _b1) * ratio + _b1);
+        (_r2->Value - _r1->Value) * ratio + _r1->Value,
+        (_g2->Value - _g1->Value) * ratio + _g1->Value,
+        (_b2->Value - _b1->Value) * ratio + _b1->Value);
   }
 
 };
