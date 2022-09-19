@@ -39,13 +39,14 @@ AsyncDNSServer* pDnsServer;
 
 void setup()
 {
+  const char *ssid = "Arrow00";
+  const char *password = "ArrowArrow";
+
   Serial.begin(115200);
   //Serial.begin(74880);
   Serial.println();
-  Serial.println("Arrow controller ");
-
-  const char *ssid = "Arrow01";
-  const char *password = "ArrowArrow";
+  Serial.println("Arrow controller: ");
+  Serial.println(ssid);
 
   WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
 
